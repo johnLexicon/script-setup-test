@@ -5,6 +5,7 @@
   <p>Name: {{ name }}</p>
   <div>
     <button @click="increment(1)">Add one</button>
+    <button @click="reset">Reset counter</button>
   </div>
 </template>
 
@@ -14,7 +15,7 @@ import { storeToRefs } from "pinia";
 
 const store = useCounterStore();
 const { counter, name, doubleCount } = storeToRefs(store);
-const { increment } = store;
+const { increment, reset } = store;
 </script>
 
 <style>
